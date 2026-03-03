@@ -1,0 +1,18 @@
+Name,Category,Endpoint Example,Auth Required,Notes
+MetaWeather,Weather,https://www.metaweather.com/api/location/2487956/,No,Open weather data, no key
+Open Notify,Space / ISS,http://api.open-notify.org/iss-now.json,No,ISS live location
+OpenNotify ISS Pass,Space / ISS,http://api.open-notify.org/iss-pass.json,No,ISS pass times
+USGS Earthquake (all_hour),Earthquakes,https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson,No,Real-time quakes worldwide
+USGS Earthquake (all_day),Earthquakes,https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson,No,All quakes past day
+REST Countries,Geography,https://restcountries.com/v3.1/all,No,Country info (population, area, etc.)
+Open‑StreetMap / Nominatim,Geocoding,https://nominatim.openstreetmap.org/search?q=Paris&format=json,No,Geocoding (use politely)
+OpenAQ,Air Quality,https://api.openaq.org/v2/latest,No,Global air quality data
+SpaceX API,Space / Launches,https://api.spacexdata.com/v4/launches/latest,No,Latest launch data
+Where The ISS At,Space / ISS,https://api.wheretheiss.at/v1/satellites/25544,No,ISS current coordinates
+IP‑API.com (free),Geolocation,http://ip-api.com/json/,No,IP → location (limited rate but no key)
+Public‑Holidays (Nager.Date),Calendar,https://date.nager.at/api/v3/PublicHolidays/2026/US,No,Public holidays by country/year
+OpenTZDB,Timezone,http://worldtimeapi.org/api/timezone/Europe/Paris,No,Timezone by region
+World Bank Data,Economics,https://api.worldbank.org/v2/country/FR/indicator/SP.POP.TOTL?format=json,No,Population, GDP etc.
+Open‑Meteo (some endpoints),Weather,https://api.open-meteo.com/v1/forecast?latitude=48.85&longitude=2.35&current_weather=true,No,Free weather data
+COVID‑19 API (Our World in Data),Health,https://covid.ourworldindata.org/data/owid-covid-data.json,No,Global case stats
+Universities List API,Data,https://universities.hipolabs.com/search?country=France,No,University directory

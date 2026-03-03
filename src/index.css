@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --font-family: 'Courier New', Courier, monospace;
+  --bg-color: #000000;
+  --text-primary: #00FF41;
+  --text-secondary: #008F11;
+  --accent-color: #00FF41;
+  --accent-glow: rgba(0, 255, 65, 0.6);
+  --glass-bg: rgba(0, 20, 0, 0.85);
+  --glass-border: rgba(0, 255, 65, 0.5);
+  --glass-shadow: 0 0 15px rgba(0, 255, 65, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hacker Theme Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid var(--glass-border);
+  box-shadow: inset 0 0 10px rgba(0, 255, 65, 0.1), var(--glass-shadow);
+  border-radius: 0;
+}
+
+.glass-button {
+  background: rgba(0, 20, 0, 0.6);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  backdrop-filter: blur(2px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.glass-button:hover {
+  background: rgba(0, 255, 65, 0.1);
+  border-color: rgba(0, 255, 65, 1);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.glass-button.active {
+  background: rgba(0, 255, 65, 0.2);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px var(--accent-glow), inset 0 0 10px var(--accent-glow);
+  color: #c8ffc8;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+  border-left: 1px solid var(--glass-border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-primary);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* CRT Scanline effect */
+.scanlines::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 50;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+/* Hide Cesium credits normally to avoid Viewer crashes */
+.cesium-viewer-bottom {
+  display: none !important;
+}
